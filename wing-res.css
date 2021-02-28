@@ -1,0 +1,510 @@
+/* タブレット向けレイアウト */
+@media all and (max-width: 1000px) {
+
+    .toplogo-img{
+        margin-top:5px;
+        width:5%;
+    }
+    
+    .catch-copy{
+        box-sizing: border-box;
+        width:80%;
+        padding-top:30px;
+        padding-bottom:30px;
+    }
+
+    /*what-wing*/
+    .wing-mobile,.wing-quality,.wing-cost{
+        float:left;
+    }
+    .wing-feature{
+        width:100%;
+        margin:0 auto;
+    }
+
+    /*fee-wrapper*/
+    .basic-plan,.standard-plan,.premium-plan{
+        width:100%;
+        padding-bottom: 50px;
+        
+    }
+    
+}
+  
+
+/* モバイル向けレイアウト */
+@media all and (max-width: 670px) {
+    header{
+        height: 50px;
+        padding-left:20px;
+    }
+
+    .toplogo-img{
+        margin-top:20px;
+        width:10%;
+    }
+    .menu-btn {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        display: flex;
+        width: 40px;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+        z-index: 90;
+        background-color: rgba(200, 200, 200, 0.8);
+    }
+    .menu-btn span,
+    .menu-btn span:before,
+    .menu-btn span:after {
+        content: '';
+        display: block;
+        height: 3px;
+        width: 25px;
+        border-radius: 3px;
+        background-color: #ffffff;
+        position: absolute;
+    }
+    .menu-btn span:before {
+        bottom: 8px;
+    }
+    .menu-btn span:after {
+        top: 8px;
+    }
+
+    #menu-btn-check:checked ~ .menu-btn span {
+        background-color: rgba(255, 255, 255, 0);/*メニューオープン時は真ん中の線を透明にする*/
+    }
+    #menu-btn-check:checked ~ .menu-btn span::before {
+        bottom: 0;
+        transform: rotate(45deg);
+    }
+    #menu-btn-check:checked ~ .menu-btn span::after {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+    
+    .menu-content {
+        width: 50%;
+        margin-left: 50%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 100%;/*leftの値を変更してメニューを画面外へ*/
+        z-index: 80;
+        background-color: grey;
+        opacity: 0.6;
+        transition: all 0.5s;/*アニメーション設定*/
+    }
+    
+    .menu-content ul {
+        padding: 70px 10px 0;
+    }
+    .menu-content ul li {
+        border-bottom: solid 1px #ffffff;
+        list-style: none;
+    }
+    .menu-content ul li a {
+        display: block;
+        width: 100%;
+        font-size: 15px;
+        box-sizing: border-box;
+        color:#ffffff;
+        text-decoration: none;
+        padding: 9px 15px 10px 0;
+        position: relative;
+    }
+    .menu-content ul li a::before {
+        content: "";
+        width: 7px;
+        height: 7px;
+        border-top: solid 2px #ffffff;
+        border-right: solid 2px #ffffff;
+        transform: rotate(45deg);
+        position: absolute;
+        right: 11px;
+        top: 16px;
+    }
+
+    #menu-btn-check:checked ~ .menu-content {
+        left: 0;/*メニューを画面内へ*/
+    }
+
+    .top-navi,.top-form {
+        display:none;
+    }
+
+    header {
+        margin-bottom:20px;
+    }
+
+    .catch-copy{
+        width:100%;
+        padding-top:30px;
+        padding-bottom:30px;
+        margin:0 auto;
+        font-size:medium;
+    }
+    /*top-wrapper*/
+    .top-wrapper{
+        height: 350px;
+    }
+    /*what-wing*/
+    .wing-mobile,.wing-quality,.wing-cost{
+        width:100%;
+        margin-bottom: 40px;
+    }
+    .wing-mobile-img,.wing-quality-img,.wing-cost-img{
+        margin-bottom: 10px;
+    }
+    .wing-mobile h3,.wing-quality h3,.wing-cost h3{
+        line-height:40px;
+    }
+     /*fee-table*/
+     .fee-table ul{
+         display: none;
+    }
+    .basic-plan,.standard-plan,.premium-plan{
+        width:100%;
+    }
+}
+
+/* 極小モバイル向けレイアウト */
+@media all and (max-width: 400px) {
+    header{
+        height: 45px;
+
+    }
+    .toplogo-img{
+        margin-top:20px;
+        width:15%;
+    }
+    /*top-wrapper*/
+    .top-wrapper{
+        height: 250px;
+    }
+}
+
+/* タブレット向けレイアウト */
+@media all and (max-width: 1000px) {
+
+    /*feature-wrapper*/
+    .feature-wrapper{
+    }
+    .feature-left{
+        width: 100%;
+    }
+    .feature-left img{
+        width: 60%;
+    }
+    .feature-right{
+        width: 100%;
+        margin: 0 auto;
+    }
+    /*---------------------*/
+    /*flow-wrapper*/
+    .flow-content-left{
+        width: 50%;
+        float: left;
+        padding: 0 15px;
+        padding-top: 50px;
+    }
+    .flow-content-left img{
+        width: 95%;
+    }
+    .flow-content-right{
+        width: 50%;
+        float: left;
+        margin-top: 10px;
+        padding:20px 20px;
+        text-align: left;
+    }
+    .flow-content-right h5{
+        font-size: 14px;
+    }
+    .flow-content-right p{
+        font-size: 12px;
+    }
+    /*---------------------*/
+    /*representative-wrapper*/
+    .representative {
+        width: 85%;
+    }
+    .representative-instruction h3{ 
+        font-size: 20px;
+    }
+    .representative-instruction p{ 
+        font-size: 12px;
+    }
+    /*---------------------*/
+
+    /*teacher-wrapper*/
+    .teacher p{ 
+        font-size: 13px;
+    }
+    /*---------------------*/
+
+    /*cash-wrapper*/
+    .cash-contents{
+        padding: 30px 30px;
+    }
+    .cash-contents h3{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .cash-contents h4{
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+    .cash-contents p{
+        font-size: 13px;
+    }
+    /*---------------------*/
+    /*contact-wrapper*/
+    .contact-title p{
+        font-size: 15px;
+    }
+    .contact-content p{
+        font-size: 13px;
+    }
+    .contact-content{
+        padding: 10px 10px;
+        margin-bottom: 20px;
+    }
+    /*---------------------*/
+
+}
+  
+/* free-trialのためのタブレット向けレイアウト */
+@media all and (max-width: 767px) {
+
+    /*free-wrapper*/
+    .free-content-img img{
+        height: 295px;
+    }
+
+    /*------------------------------*/
+}
+/*--------------------------------------*/
+
+/* モバイル向けレイアウト */
+@media all and (max-width: 670px) {
+    div[class*="wrapper"] h2{
+        font-size: 18px;
+    }
+    div[class*="wrapper"] h3{
+        font-size: 16px;
+    }
+    div[class*="wrapper"] h4{
+        font-size: 15px;
+    }
+    div[class*="wrapper"] h5{
+        font-size: 14px;
+    }
+    div[class*="wrapper"] p{
+        font-size: 13px;
+    }
+    div[class*="wrapper"]{
+        padding: 40px 0px;
+        text-align: center;
+    }
+    .detail{
+        padding-bottom: 10px;
+ 
+    }
+
+    /*feature-wrapper*/
+    .feature-wrapper{
+    }
+    .feature-left{
+        padding-top: 40px;
+    }
+    .feature-left img{
+        width: 100%;
+    }
+    .feature{
+        width: 100%;
+        margin-bottom: 0px;
+    }
+    .feature-img{
+        width: 80%;
+        margin-left: 10%;
+        float: left;
+        margin-top: 5px;
+    }
+    .feature-img img{
+        width: 100%;
+    }
+    .feature-description{
+        width: 80%;
+        padding: 10px 0px;
+        margin-left: 10%;
+        text-align: left;
+        float: left;
+    }
+    .feature-description p{
+         font-size: 11px;
+
+    }
+    /*---------------------*/
+    /*flow-wrapper*/
+    .flow-content-left{
+        width: 100%;
+        clear: left;
+        padding: 0 15px;
+        padding-top: 20px;
+    }
+    .flow-content-left img{
+        width: 100%;
+    }
+    .flow-content-right{
+        width: 100%;
+        clear: left;
+        margin-top: 10px;
+        padding:20px 20px;
+        text-align: left;
+    }
+    .flow-title h3{
+        line-height: 70px;
+    }
+    .flow-content-right p{
+        font-size: 11px;
+    }
+    /*---------------------*/
+
+    /*representative-wrapper*/
+    .representative-title-h2{
+        margin-top: 0px;
+    
+    }
+    .detail{
+        margin-bottom: 20px;
+    }
+    .representative {
+    width: 95%;
+    margin: 0px auto;
+    padding: 0px 20px;
+    }
+    .representative-image{
+    width: 100%;
+    margin: 0 0;
+    }
+    .representative img{
+    width: 100%;
+    padding: 12% 5%;
+    }
+
+    .representative-instruction{
+    width: 100%;
+    padding-top: 0 ;
+    }
+    .representative-instruction h3{
+    border-bottom: 1px solid #c0c0c0;
+    margin-top: 0%;
+    margin-bottom: 5%;
+    padding-bottom: 5%;
+    }
+    /*------------------------------------------------*/
+    /*teacher-wrapper*/
+    .teacher{
+        width: 100%;
+        text-align: center;
+        margin: 4% 0;
+    }
+    .teacher img{
+        width: 80%;
+    }
+    .teacher p{ 
+        font-size: 12px;
+    }
+    /*---------------------*/
+    /*free-wrapper*/
+    .free-wrapper{
+        width: 100%;
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+        padding-top: 100px;
+        margin-top: 100px;
+        border-top: 1px solid rgba(200,200,200,0.7);
+        
+    }
+    .free-contents{
+        width: 100%;
+        margin-top: 10px;
+    }
+    .free-content{
+        width: 100%;
+    }
+    .free-content-description{
+        width: 100%;
+        float: left;
+        padding: 6%;
+        text-align: left;
+    }
+    .free-content-img{
+        width: 50%;
+    }
+    .free-content-img img{
+        width: 100%;
+        height: auto;
+        display: none;
+    }
+    .free-content-description h3 {
+        font-size: 18px;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+    .free-content-description p {
+        font-size: 13px;
+    }
+    /*---------------------------------------*/
+    /*cash-wrapper*/
+    .cash-contents{
+        width: 95%;
+        padding: 20px 20px;
+    }
+    .cash-contents h3{
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    .cash-contents h4{
+        margin-bottom: 10px;
+        font-size: 13px;
+    }
+    .cash-contents p{
+   
+        padding-top: 20px;
+        font-size: 11px;
+    }
+    /*---------------------*/
+    /*contact-wrapper*/
+    .contacts{
+        margin-top: 0px; 
+    }
+    .contact{
+        width: 70%;
+        
+        margin: 15px auto;
+        margin-left: 15%;
+    }
+    .contact-title p{
+        font-size: 14px;
+    }
+    .contact-content p{
+        font-size: 11px;
+    }
+    .contact-content{
+        padding: 10px 10px;
+        margin-bottom: 20px;
+    }
+    /*---------------------*/
+    /*company-wrapper*/
+    .company-contents-left{
+        width: 100%;
+    }
+    .company-contents-right{
+        width: 100%;
+    }
+    /*---------------------*/
+}
